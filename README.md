@@ -1,5 +1,5 @@
-![Testing workflow](https://github.com/Ovakefali13/testing-boost-exercise/actions/workflows/main.yml/badge.svg)
-
+![Testing workflow](https://github.com/Ovakefali13/testing-boost-exercise/actions/workflows/tests.yml/badge.svg)
+a
 # SIDEMADE - Simple Dense Matrix Decomposition
 
 A simple demo code to read dense matrices from files and solve linear systems with them.
