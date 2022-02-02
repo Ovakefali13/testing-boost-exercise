@@ -1,8 +1,8 @@
-#define BOOST_TEST_MODULE SideMadeTests
 #define BOOST_TEST_DYN_LINK
 #include <Eigen/Dense>
 #include <boost/test/unit_test.hpp>
-
+#include <iostream>
+#include <vector>
 #include "matrixIO.hpp"
 
 using namespace Eigen;
