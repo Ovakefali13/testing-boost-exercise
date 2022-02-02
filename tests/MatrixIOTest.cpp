@@ -2,9 +2,8 @@
 #define BOOST_TEST_DYN_LINK
 #include <Eigen/Dense>
 #include <boost/test/unit_test.hpp>
-#include <boost/test/test_tools.hpp>
-#include "MatrixSolver.hpp"
-#include "MatrixIO.hpp"
+
+#include "matrixIO.hpp"
 
 using namespace Eigen;
 
@@ -25,8 +24,16 @@ BOOST_AUTO_TEST_CASE(openData)
 {
     MatrixXd actualMatrix;
     actualMatrix = matrixIO::openData("../data/m3.csv", 3);
-
-    BOOST_CHECK_EQUAL_COLLECTIONS(actualMatrix.begin(), actualMatrix.end(), expectedMatrix.begin(), expectedMatrix.end());
+    
+    BOOST_TEST(actualMatrix(0, 0) == expectedMatrix(0, 0));
+    BOOST_TEST(actualMatrix(0, 1) == expectedMatrix(0, 1));
+    BOOST_TEST(actualMatrix(0, 2) == expectedMatrix(0, 2));
+    BOOST_TEST(actualMatrix(1, 0) == expectedMatrix(1, 0));
+    BOOST_TEST(actualMatrix(1, 1) == expectedMatrix(1, 1));
+    BOOST_TEST(actualMatrix(1, 2) == expectedMatrix(1, 2));
+    BOOST_TEST(actualMatrix(2, 0) == expectedMatrix(2, 0));
+    BOOST_TEST(actualMatrix(2, 1) == expectedMatrix(2, 1));
+    BOOST_TEST(actualMatrix(2, 2) == expectedMatrix(2, 2));
 }
 
 BOOST_AUTO_TEST_SUITE_END()
